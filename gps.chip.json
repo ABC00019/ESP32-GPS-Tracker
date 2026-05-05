@@ -1,0 +1,11 @@
+{
+  "name": "gps",
+  "author": "Author name",
+  "pins": [
+    "VCC",
+    "GND",
+    "TX",
+    "RX"
+  ],
+  "controls": []
+}
