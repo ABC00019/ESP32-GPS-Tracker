@@ -19,31 +19,36 @@
       "attrs": { "color": "red" }
     },
     {
-      "type": "wokwi-pushbutton",
-      "id": "btn1",
+      "type": "wokwi-slide-switch",
+      "id": "sw1",
       "top": -83,
       "left": -316.6,
-      "rotate": 180,
-      "attrs": { "color": "green", "xray": "1" }
+      "attrs": {}
     },
-    { "type": "wokwi-microsd-card", "id": "sd1", "top": 125.03, "left": -355.13, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": 125.03, "left": -355.13, "attrs": { "image": "sd_drive" } },
     { "type": "chip-gps", "id": "chip1", "top": -46.98, "left": -110.4, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "sd1:CS", "esp:10", "white", [] ],
-    [ "sd1:MOSI", "esp:11", "blue", [] ],
-    [ "sd1:SCK", "esp:12", "yellow", [] ],
-    [ "sd1:MISO", "esp:13", "green", [] ],
-    [ "led1:A", "esp:4", "orange", [] ],
-    [ "led1:C", "esp:GND.3", "black", [] ],
-    [ "btn1:1.l", "esp:5", "green", [] ],
-    [ "btn1:2.l", "esp:GND.4", "black", [] ],
-    [ "chip1:GND", "esp:GND.1", "black", [] ],
-    [ "chip1:VCC", "esp:3V3", "red", [] ],
-    [ "chip1:TX", "esp:18", "purple", [] ],
-    [ "chip1:RX", "esp:17", "orange", [] ]
+
+    [ "sd1:CS",   "esp:10", "white",  [] ],
+    [ "sd1:MOSI", "esp:11", "blue",   [] ],
+    [ "sd1:SCK",  "esp:12", "yellow", [] ],
+    [ "sd1:MISO", "esp:13", "green",  [] ],
+    [ "sd1:VCC",  "esp:3V3",  "red",   [] ],
+    [ "sd1:GND",  "esp:GND.2","black", [] ],
+
+    [ "led1:A", "esp:4",     "orange", [] ],
+    [ "led1:C", "esp:GND.3", "black",  [] ],
+
+    [ "sw1:2", "esp:5",     "green", [] ],
+    [ "sw1:1", "esp:GND.2", "black", [] ],
+
+    [ "chip1:GND", "esp:GND.1", "black",  [] ],
+    [ "chip1:VCC", "esp:3V3",   "red",    [] ],
+    [ "chip1:TX",  "esp:18",    "purple", [] ],
+    [ "chip1:RX",  "esp:17",    "orange", [] ]
   ],
   "dependencies": {}
 }
