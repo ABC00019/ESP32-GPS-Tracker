@@ -33,10 +33,10 @@
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
 
     [ "sd1:CS",   "esp:10", "white",  [] ],
-    [ "sd1:MOSI", "esp:11", "blue",   [] ],
+    [ "sd1:DI",   "esp:11", "blue",   [] ],
     [ "sd1:SCK",  "esp:12", "yellow", [] ],
-    [ "sd1:MISO", "esp:13", "green",  [] ],
-    [ "sd1:VCC",  "esp:3V3",  "red",   [] ],
+    [ "sd1:DO",   "esp:13", "green",  [] ],
+    [ "sd1:VCC",  "esp:3V3.1",  "red",   [] ],
     [ "sd1:GND",  "esp:GND.2","black", [] ],
 
     [ "led1:A", "esp:4",     "orange", [] ],
@@ -46,7 +46,7 @@
     [ "sw1:1", "esp:GND.2", "black", [] ],
 
     [ "chip1:GND", "esp:GND.1", "black",  [] ],
-    [ "chip1:VCC", "esp:3V3",   "red",    [] ],
+    [ "chip1:VCC", "esp:3V3.2",   "red",    [] ],
     [ "chip1:TX",  "esp:18",    "purple", [] ],
     [ "chip1:RX",  "esp:17",    "orange", [] ]
   ],

@@ -3,3 +3,12 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Local archive of old/experimental files
+archive/
+
+# Editor & OS junk
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
